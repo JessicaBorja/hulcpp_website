@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Grounding Language with Visual Affordances over Unstructured Data.">
+  <meta name="keywords" content="HULCpp, Affordance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grounding Language with Visual Affordances over Unstructured Data</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- ***** Preloader Start ***** -->
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner" id="top">
+    <video autoplay muted loop id="bg-video">
+        <source src="./static/images/video_icra.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <!-- <div class="caption">
+            <h6>work harder, get stronger</h6>
+            <h2>easy with our <em>gym</em></h2>
+            <div class="main-button scroll-to-section">
+                <a href="#features">Become a member</a>
+            </div>
+        </div> -->
+        <section class="hero has-text-light is-fullheight" id="banner_text">
+            <div class="hero-body" >
+              <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                  <div class="column has-text-centered">
+                    <h1 class="title publication-title">Grounding Language with Visual Affordances over Unstructured Data</h1>
+                    <div class="publication-authors">
+                      <span class="author-block">
+                        <a>Jessica Borja</a><sup>1</sup>,</span>
+                      <span class="author-block">
+                        <a href="https://www.oiermees.com/">Oier Mees</a><sup>1</sup>,</span>
+                      <span class="author-block">
+                        <a href="http://www2.informatik.uni-freiburg.de/~burgard/">Wolfram Burgard</a><sup>2</sup>,
+                      </span>
+                      </span>
+                    </div>
+          
+                    <div class="publication-authors">
+                      <span class="author-block"><sup>1</sup>University of freiburg,</span>
+                      <span class="author-block"><sup>2</sup>University of Nuremberg</span>
+                    </div>
+          
+                    <div class="column has-text-centered">
+                      <div class="publication-links">
+                        <span class="link-block">
+                          <a href=""
+                             class="external-link button is-rounded is-light">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>Paper</span>
+                          </a>
+                        </span>
+                        <span class="link-block">
+                          <a href=""
+                             class="external-link button is-rounded is-light">
+                            <span class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </span>
+                            <span>Video</span>
+                          </a>
+                        </span>
+
+                        <span class="link-block">
+                          <a href=""
+                             class="external-link button is-rounded is-light">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>Code</span>
+                            </a>
+                        </span>
+                      </div>
+          
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/images/video_icra.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/images/video_icra.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/images/video_icra.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/images/video_icra.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent works have shown that Large Language Models (LLMs) can be applied to ground natural language to a wide variety of robot skills. However, in practice, learning multi-task, language-conditioned robotic skills typically requires large-scale data collection and frequent human intervention to reset the environment or help correcting the current policies. In this work, we propose a novel approach to efficiently learn general-purpose language-conditioned robot skills from unstructured, offline and reset-free data in the real world by exploiting a self-supervised visuo-lingual affordance model, which requires annotating as little as 1\% of the total data with language. 
+          </p>
+          <p>
+            We evaluate our method in extensive experiments both in simulated and real-world robotic tasks, achieving state-of-the-art performance on the challenging <a href="http://calvin.cs.uni-freiburg.de/">CALVIN benchmark</a> and learning over 25 distinct visuomotor manipulation tasks with a single policy in the real world. We find that when paired with LLMs to break down abstract natural language instructions into subgoals via few-shot prompting, our method is capable of completing long-horizon, multi-tier tasks in the real world, while requiring an order of magnitude less data than previous approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./static/images/video_icra.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- Approach. -->
+<section class="section bg-light">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <!-- <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div> -->
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">TECHNICAL APPROACH</h2>
+        <p>
+            HULC++ first processes a language instruction and an image from a static camera to predict
+            the afforded region and guides the robot to its vicinity. Once inside this area, we switch to a language conditioned imitation learning
+            agent that receives RGB observations from both a gripper and a static camera, and learns 7-DoF goal-reaching policies end-to-end. Both
+            modules learn from the same free-form, unstructured dataset and require as little as 1% of language annotations.
+        </p>
+        <img class="my-6" src="./static/images/high_level_overview.png">
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experiments. -->
+<section class="section" id="experiments">
+    <div class="container is-max-desktop content">
+      <h2 class="title">EXPERIMENTS</h2>
+      <h3 class="title is-4">Single tasks </h3>
+      <div class="content has-text-justified">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id augue et lectus consectetur ultrices. Cras auctor nulla convallis elit aliquam, nec pulvinar eros facilisis. Maecenas consectetur non augue eu lobortis. Morbi semper, nisi non sollicitudin mattis, diam lacus aliquet est, ac venenatis mi massa sed lacus. Aenean convallis mollis enim ut congue. Proin ac arcu nisi. Sed ornare lectus vitae felis hendrerit placerat. Nullam pellentesque neque ligula, et egestas tortor molestie at.
+        </p>
+      </div>
+      <br/>
+  
+      <div class="columns is-centered">
+        <!-- Comparison. -->  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Ours</h2>
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+              <source src="./static/images/video_icra.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+
+        <div class="column">
+          <h2 class="title is-3">Baseline</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/video_icra.mp4" type="video/mp4">
+              </video>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+
+      <h3 class="title is-4">Sequential tasks</h3>
+      <div class="content has-text-justified">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id augue et lectus consectetur ultrices. Cras auctor nulla convallis elit aliquam, nec pulvinar eros facilisis. Maecenas consectetur non augue eu lobortis. Morbi semper, nisi non sollicitudin mattis, diam lacus aliquet est, ac venenatis mi massa sed lacus. Aenean convallis mollis enim ut congue. Proin ac arcu nisi. Sed ornare lectus vitae felis hendrerit placerat. Nullam pellentesque neque ligula, et egestas tortor molestie at.
+        </p>
+      </div>
+    </div>
+</section>
+
+<!-- Citation. -->
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop content">
+    <h2 class="title">CITATION</h2>
+    <pre><code>@article{mees2021Grounding,
+  author    = {Oier Mees, Jessica Borja, Wolfram Burgard},
+  title     = {Grounding Language with Visual Affordances over Unstructured Data},
+}</code></pre>
+  </div>
+</section>
+
+<section class="section" id="people">
+    <div class="container is-max-desktop content">
+      <h2 class="title">PEOPLE</h2>
+      <div class="columns">
+        <div class="column has-text-centered">
+            <figure class="image is-256x256">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+              </figure>
+              <h4> <a href="#"> Jessica Borja </a></h4>
+        </div>
+        <div class="column has-text-centered">
+            <figure class="image  is-256x256">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+              </figure>
+            <h4> <a href="#"> Oier Mees </a></h4>
+        </div>
+        <div class="column has-text-centered">
+            <figure class="image  is-256x256">
+                <img src="https://bulma.io/images/placeholders/256x256.png">
+              </figure>
+              <h4> <a href="#"> Wolfram Burgard </a></h4>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<footer class="footer ">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p> Website borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
