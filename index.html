@@ -58,7 +58,7 @@
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-banner" id="top">
     <video autoplay muted loop id="bg-video">
-        <source src="./static/images/video_icra.mp4" type="video/mp4" />
+        <source src="./static/images/teaser.mp4" type="video/mp4" />
     </video>
 
     <div class="video-overlay header-text">
@@ -140,26 +140,26 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/images/video_icra.mp4"
+            <source src="./static/images/tidy_up_and_turn_on_green_light.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/images/video_icra.mp4"
+            <source src="./static/images/tidy_up_the_blocks.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/images/video_icra.mp4"
+            <source src="./static/images/tidy_up.mp4"
                     type="video/mp4">
           </video>
         </div>
 
         <div class="item">
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/images/video_icra.mp4"
+            <source src="./static/images/ours_manual.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -177,7 +177,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent works have shown that Large Language Models (LLMs) can be applied to ground natural language to a wide variety of robot skills. However, in practice, learning multi-task, language-conditioned robotic skills typically requires large-scale data collection and frequent human intervention to reset the environment or help correcting the current policies. In this work, we propose a novel approach to efficiently learn general-purpose language-conditioned robot skills from unstructured, offline and reset-free data in the real world by exploiting a self-supervised visuo-lingual affordance model, which requires annotating as little as 1\% of the total data with language. 
+            Recent works have shown that Large Language Models (LLMs) can be applied to ground natural language to a wide variety of robot skills. However, in practice, learning multi-task, language-conditioned robotic skills typically requires large-scale data collection and frequent human intervention to reset the environment or help correcting the current policies. In this work, we propose a novel approach to efficiently learn general-purpose language-conditioned robot skills from unstructured, offline and reset-free data in the real world by exploiting a self-supervised visuo-lingual affordance model, which requires annotating as little as 1% of the total data with language. 
           </p>
           <p>
             We evaluate our method in extensive experiments both in simulated and real-world robotic tasks, achieving state-of-the-art performance on the challenging <a href="http://calvin.cs.uni-freiburg.de/">CALVIN benchmark</a> and learning over 25 distinct visuomotor manipulation tasks with a single policy in the real world. We find that when paired with LLMs to break down abstract natural language instructions into subgoals via few-shot prompting, our method is capable of completing long-horizon, multi-tier tasks in the real world, while requiring an order of magnitude less data than previous approaches.
@@ -264,47 +264,155 @@
 <section class="section" id="experiments">
     <div class="container is-max-desktop content">
       <h2 class="title">EXPERIMENTS</h2>
-      <h3 class="title is-4">Single tasks </h3>
-      <div class="content has-text-justified">
+      <h3 class="title">Secuential instructions</h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id augue et lectus consectetur ultrices. Cras auctor nulla convallis elit aliquam, nec pulvinar eros facilisis. Maecenas consectetur non augue eu lobortis. Morbi semper, nisi non sollicitudin mattis, diam lacus aliquet est, ac venenatis mi massa sed lacus. Aenean convallis mollis enim ut congue. Proin ac arcu nisi. Sed ornare lectus vitae felis hendrerit placerat. Nullam pellentesque neque ligula, et egestas tortor molestie at.
+            We evaluate our approach by giving the agent several instructions in a row. To generate the sequence of instructions we make two experiments. On the first, we use <a href="https://beta.openai.com/playground"> gpt-3 playground </a> to split a general long-horizon instruction into a sequence of multiple smaller-horizon instructions. On the latter one, we manually give sequential instructions to the agent while inspecting its behavior.
         </p>
-      </div>
+      <h4 class="title">GPT-3 generated sequences </h4>
       <br/>
-  
-      <div class="columns is-centered">
+        <!-- GPT 3-->
+        <div class="columns is-centered">
         <!-- Comparison. -->  
         <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Ours</h2>
+            <div class="content">
+            <h5 class="title">"Tidy up and turn on the green light"</h5>
             <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
-              <source src="./static/images/video_icra.mp4" type="video/mp4">
+                <source src="./static/images/tidy_up_and_turn_on_green_light.mp4" type="video/mp4">
             </video>
-          </div>
-        </div>
-  
-
-        <div class="column">
-          <h2 class="title is-3">Baseline</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
-                <source src="./static/images/video_icra.mp4" type="video/mp4">
-              </video>
             </div>
-  
-          </div>
         </div>
-      </div>
-      <!--/ Comparison. -->
+        <div class="column">
+            <h5 class="title">"Tidy up the blocks"</h5>
+            <div class="columns is-centered">
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/tidy_up_the_blocks.mp4" type="video/mp4">
+                </video>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="column">
+            <h5 class="title">"Tidy up"</h5>
+            <div class="columns is-centered">
+                <div class="column content">
+                    <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                    <source src="./static/images/tidy_up.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
 
-      <h3 class="title is-4">Sequential tasks</h3>
-      <div class="content has-text-justified">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id augue et lectus consectetur ultrices. Cras auctor nulla convallis elit aliquam, nec pulvinar eros facilisis. Maecenas consectetur non augue eu lobortis. Morbi semper, nisi non sollicitudin mattis, diam lacus aliquet est, ac venenatis mi massa sed lacus. Aenean convallis mollis enim ut congue. Proin ac arcu nisi. Sed ornare lectus vitae felis hendrerit placerat. Nullam pellentesque neque ligula, et egestas tortor molestie at.
-        </p>
-      </div>
+        <!-- Manual-->
+        <h4 class="title"> Manually instructed sequences </h4>
+        <br/>
+        <div class="columns is-centered">
+        <div class="column">
+            <div class="content">
+            <h5 class="title">Ours</h5>
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/ours_manual.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+        <div class="column">
+            <div class="column content">
+            <h5 class="title">BC-Zero (baseline)</h5>
+            <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/bcz_manual.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+        <div class="column">
+            <div class="column content">
+                <h5 class="title">HULC (baseline)</h5>
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/hulc_manual.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        </div>
+        <!-- END OF SEQUENTIAL -->
+      <!-- single tasks-->
+    <h3 class="title">Single instructions</h3>
+    <p>
+       Our model is able to understand and perform a wide range of instructions. Furthermore, the use of large language models allows it to generalize to new instructions with a similar semantic meaning.
+    </p>
+    <div class="columns is-centered">
+        <div class="column">
+            <h5 class="title">"Switch on the green thing" (unseen instruction) </h5>
+            <div class="columns is-centered">
+                <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                    <source src="./static/images/single_tasks/green_light_lang_generalization.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+            <h5 class="title">"Turn on the green light"</h5>
+            <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/green_light.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
     </div>
+    <div class="columns is-centered">
+        <div class="column">
+            <h5 class="title">"Lift the yellow block"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/lift_yellow_block.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="column">
+            <h5 class="title">"Place the pink block inside the left cabinet"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/place_left_cabinet.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column">
+            <h5 class="title">"Push the pink block towards the left"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/push_left.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="column">
+            <h5 class="title">"Grasp the pink block then rotate it right"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/rotate_drawer.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column">
+            <h5 class="title">"Stack the pink block on top of the yellow block"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/stack_pink.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="column">
+            <h5 class="title">"Unstack the pink block"</h5>
+            <div class="column content">
+                <video id="matting-video" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+                <source src="./static/images/single_tasks/unstack_pink.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 <!-- Citation. -->
@@ -324,19 +432,19 @@
       <div class="columns">
         <div class="column has-text-centered">
             <figure class="image is-256x256">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
+                <img src="./static/images/jessica.jpg">
               </figure>
               <h4> <a href="#"> Jessica Borja </a></h4>
         </div>
         <div class="column has-text-centered">
             <figure class="image  is-256x256">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
+                <img src="./static/images/mees.jpg">
               </figure>
             <h4> <a href="#"> Oier Mees </a></h4>
         </div>
         <div class="column has-text-centered">
             <figure class="image  is-256x256">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
+                <img src="./static/images/burgard.jpg">
               </figure>
               <h4> <a href="#"> Wolfram Burgard </a></h4>
         </div>
@@ -367,6 +475,12 @@
     </div>
   </div>
 </footer>
-
 </body>
+<script>
+    const video = document.getElementById('main-video') as HTMLVideoElement;
+    video.addEventListener('ended', () => {
+      video.currentTime = 0.2;
+      video.play();
+    });
+</script>
 </html>
